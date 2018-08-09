@@ -14,9 +14,11 @@ using Newtonsoft.Json;
 
 namespace Turistiando
 {
-    public partial class Form1 : Form
+    public partial class FrmPrincipal : Form
     {
-        public Form1()
+        Lugar lugar;
+
+        public FrmPrincipal()
         {
             InitializeComponent();
             toolTip1.SetToolTip(tbxTiempo, "Tiempo de Estancia");
@@ -24,6 +26,7 @@ namespace Turistiando
 
 
             cbTiempo.SelectedIndex = 0;
+            lugar = new Lugar();
         }
 
         private void pbxCerrar_Click(object sender, EventArgs e)
@@ -33,12 +36,22 @@ namespace Turistiando
                 Application.Exit();
             }
         }
+
         private void btnRecomendar_Click_1(object sender, EventArgs e)
         {
-            /*Form2 FrmForm2 = new Form2();
-            FrmForm2.Show();
-            this.Hide();*/
+            obtenerDatos();
 
+            FrmResultados frmResultados = new FrmResultados();
+
+            frmResultados.lugar = lugar;
+
+            frmResultados.Show();
+            this.Hide();
+
+        }
+
+        private void obtenerDatos()
+        {
             string url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=100&types=food&name=harbour&key=AIzaSyB5oEd0b0RaZdrMujXhC4mVW4-m7fK6kJA";
 
             WebRequest request = WebRequest.Create(url);
@@ -52,12 +65,10 @@ namespace Turistiando
             // json que se obtiene de la api
             string responseFromServer = reader.ReadToEnd();
 
-            Lugar lugar = new Lugar();
-
             lugar = JsonConvert.DeserializeObject<Lugar>(responseFromServer);
 
             response.Close();
-
         }
+
     }
 }

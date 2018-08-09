@@ -23,3 +23,17 @@ C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\obj\Debug\Turi
 C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\bin\Debug\Newtonsoft.Json.dll
 C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\bin\Debug\Newtonsoft.Json.xml
 C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\obj\Debug\Turistiando.csproj.CopyComplete
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\bin\Debug\Turistiando.exe.config
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\bin\Debug\Turistiando.exe
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\bin\Debug\Turistiando.pdb
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\bin\Debug\Newtonsoft.Json.dll
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\bin\Debug\Newtonsoft.Json.xml
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\obj\Debug\Turistiando.csprojAssemblyReference.cache
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\obj\Debug\Turistiando.FrmPrincipal.resources
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\obj\Debug\Turistiando.FrmResultados.resources
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\obj\Debug\Turistiando.Properties.Resources.resources
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\obj\Debug\Turistiando.csproj.GenerateResource.cache
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\obj\Debug\Turistiando.csproj.CoreCompileInputs.cache
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\obj\Debug\Turistiando.csproj.CopyComplete
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\obj\Debug\Turistiando.exe
+C:\Users\halco\OneDrive\Documentos\GitHub\Turisteando\Turistiando\obj\Debug\Turistiando.pdb

@@ -11,21 +11,19 @@ using System.Drawing.Drawing2D;
 
 namespace Turistiando
 {
-    public partial class Form2 : Form
+    public partial class FrmResultados : Form
     {
-        //public List<Lugar> lugaresn;
+        public Lugar lugar;
 
-        public Form2()
+        public FrmResultados()
         {
             InitializeComponent();
-
-            //lugares = new List<Lugar>();
 
         }
 
         private void pbxCerrar_Click(object sender, EventArgs e)
         {
-            Form1 FrmForm1 = new Form1();
+            FrmPrincipal FrmForm1 = new FrmPrincipal();
             FrmForm1.Show();
             this.Hide();
         }
