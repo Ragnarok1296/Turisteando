@@ -1,0 +1,25 @@
+C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turistiando\Turistiando\bin\Debug\Turistiando.exe.config
+C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turistiando\Turistiando\bin\Debug\Turistiando.exe
+C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turistiando\Turistiando\bin\Debug\Turistiando.pdb
+C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turistiando\Turistiando\obj\Debug\Turistiando.csprojAssemblyReference.cache
+C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turistiando\Turistiando\obj\Debug\Turistiando.Form2.resources
+C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turistiando\Turistiando\obj\Debug\Turistiando.Properties.Resources.resources
+C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turistiando\Turistiando\obj\Debug\Turistiando.csproj.GenerateResource.cache
+C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turistiando\Turistiando\obj\Debug\Turistiando.csproj.CoreCompileInputs.cache
+C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turistiando\Turistiando\obj\Debug\Turistiando.exe
+C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turistiando\Turistiando\obj\Debug\Turistiando.pdb
+C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turistiando\Turistiando\obj\Debug\Turistiando.Form1.resources
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\bin\Debug\Turistiando.exe.config
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\bin\Debug\Turistiando.exe
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\bin\Debug\Turistiando.pdb
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\obj\Debug\Turistiando.csprojAssemblyReference.cache
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\obj\Debug\Turistiando.Form1.resources
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\obj\Debug\Turistiando.Form2.resources
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\obj\Debug\Turistiando.Properties.Resources.resources
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\obj\Debug\Turistiando.csproj.GenerateResource.cache
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\obj\Debug\Turistiando.csproj.CoreCompileInputs.cache
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\obj\Debug\Turistiando.exe
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\obj\Debug\Turistiando.pdb
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\bin\Debug\Newtonsoft.Json.dll
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\bin\Debug\Newtonsoft.Json.xml
+C:\Users\halco\OneDrive\Documentos\GitHub\Turistiando\Turistiando\obj\Debug\Turistiando.csproj.CopyComplete
