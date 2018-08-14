@@ -55,6 +55,11 @@ namespace Turistiando
         {
             obtenerDatosApi();
 
+            ///
+            AlgoritmoGenetico algoritmoGenetico = new AlgoritmoGenetico(Convert.ToInt32(tbxTiempo.Text));
+            String cadenaGenetica = algoritmoGenetico.main(lugar);
+            ///
+
             FrmResultados frmResultados = new FrmResultados();
 
             frmResultados.lugar = lugar;
@@ -74,7 +79,7 @@ namespace Turistiando
             string types = "&types=point_of_interest";
             string key = "&key=AIzaSyB5oEd0b0RaZdrMujXhC4mVW4-m7fK6kJA";
 
-            //url = url + location + radius + types + key; 
+            url = url + location + radius + types + key; 
 
             WebRequest request = WebRequest.Create(url);
 
