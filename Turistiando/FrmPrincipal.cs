@@ -1,33 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using Newtonsoft.Json;
+using Turistiando.Modelos;
 
 namespace Turistiando
 {
     public partial class FrmPrincipal : Form
     {
-        Lugar lugar;
+        private Lugar lugares;
+        private API api;
+        private AlgoritmoGenetico algoritmoGenetico;
 
         public FrmPrincipal()
         {
             InitializeComponent();
-
             toolTip1.SetToolTip(tbxTiempo, "Tiempo de Estancia");
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            lugar = new Lugar();
+            lugares = new Lugar();
+            api = new API();
             
             cbTiempo.SelectedIndex = 0;
 
@@ -42,61 +34,7 @@ namespace Turistiando
 
             Ubicacion.GetLocationProperty();
         }
-
-        private void pbxCerrar_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("¿Esta seguro de cerrar el programa?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void btnRecomendar_Click_1(object sender, EventArgs e)
-        {
-            obtenerDatosApi();
-
-            ///
-            AlgoritmoGenetico algoritmoGenetico = new AlgoritmoGenetico(Convert.ToInt32(tbxTiempo.Text));
-            String cadenaGenetica = algoritmoGenetico.main(lugar);
-            ///
-
-            FrmResultados frmResultados = new FrmResultados();
-
-            frmResultados.lugar = lugar;
-
-            frmResultados.Show();
-
-            this.Hide();
-
-        }
-
-        private void obtenerDatosApi()
-        {
-            
-            string url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json";
-            string location = "?location=20.0967662,-98.7051163";
-            string radius = "&radius=500";
-            string types = "&types=point_of_interest";
-            string key = "&key=AIzaSyB5oEd0b0RaZdrMujXhC4mVW4-m7fK6kJA";
-
-            url = url + location + radius + types + key; 
-
-            WebRequest request = WebRequest.Create(url);
-
-            WebResponse response = request.GetResponse();
-
-            Stream data = response.GetResponseStream();
-
-            StreamReader reader = new StreamReader(data);
-
-            // json que se obtiene de la api
-            string json = reader.ReadToEnd();
-
-            lugar = JsonConvert.DeserializeObject<Lugar>(json);
-
-            response.Close();
-        }
-
+        
         private void btnMiUbicacion_Click(object sender, EventArgs e)
         {
 
@@ -121,6 +59,50 @@ namespace Turistiando
             
             frmUbicacion.Show();
             this.Hide();
+        }
+
+        private void btnRecomendar_Click(object sender, EventArgs e)
+        {
+            if (tbxTiempo.Text != "")
+            {
+                int estancia = 0;
+
+                if (cbTiempo.SelectedIndex == 0)
+                    estancia = Convert.ToInt32(tbxTiempo.Text) * 60 * 60;
+                else if (cbTiempo.SelectedIndex == 1)
+                    estancia = Convert.ToInt32(tbxTiempo.Text) * 12 * 60 * 60;
+
+
+                lugares = api.obtenerLugares();
+
+                if (lugares.Results.Length > 0)
+                {
+                    algoritmoGenetico = new AlgoritmoGenetico(estancia);
+                    String cadenaGenetica = algoritmoGenetico.main(lugares);
+
+
+                    FrmResultados frmResultados = new FrmResultados();
+
+                    frmResultados.lugares = lugares;
+                    frmResultados.cadenaGenetica = cadenaGenetica;
+
+                    frmResultados.Show();
+
+                    this.Hide();
+                }
+                else
+                    MessageBox.Show("No se encontraron lugares cerca de su ubicacion");
+            }
+            else
+                MessageBox.Show("Introduzca el tiempo de estancia.");
+        }
+
+        private void pbxCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Esta seguro de cerrar el programa?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

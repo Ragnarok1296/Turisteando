@@ -55,7 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlgoritmoGenetico.cs" />
+    <Compile Include="Modelos\AlgoritmoGenetico.cs" />
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,10 +74,12 @@
     <Compile Include="FrmUbicacion.Designer.cs">
       <DependentUpon>FrmUbicacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lugar.cs" />
+    <Compile Include="Modelos\Lugar.cs" />
+    <Compile Include="Modelos\API.cs" />
+    <Compile Include="Modelos\Ruta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ubicacion.cs" />
+    <Compile Include="Modelos\Ubicacion.cs" />
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

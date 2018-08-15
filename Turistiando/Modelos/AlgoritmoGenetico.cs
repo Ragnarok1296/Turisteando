@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Turistiando.Modelos;
 
 namespace Turistiando
 {
     class AlgoritmoGenetico
     {
         private Lugar lugares;
+        private API api;
 
         private string[] individuos;
         private double[] pesos;
@@ -44,6 +42,8 @@ namespace Turistiando
 
         public AlgoritmoGenetico(int _capacity )
         {
+            api = new API();
+
             capacity = _capacity;
 
             individuos = new string[numpoblacion];
@@ -100,9 +100,15 @@ namespace Turistiando
 
             for(int i=0; i<lugares.Results.Length; i++)
             {
+                //Se guarda el rating del lugar
                 profits[i] = lugares.Results[i].Rating;
-                //Cambiar el 4 por el valor de la api de distancia
-                weights[i] = 4;
+                
+                //Se obtiene la latitud y longitud ara mandarsela como parametro al metodo de obtener ruta
+                string latitud = lugares.Results[i].Geometry.Location.Lat.ToString();
+                string longitud = lugares.Results[i].Geometry.Location.Lng.ToString();
+ 
+                //Se almacena el tiempo en segundos
+                weights[i] = api.obtenerRuta(latitud, longitud).Routes[0].Legs[0].Duration.Value;
             }
 
         }
@@ -327,8 +333,7 @@ namespace Turistiando
 
                 if (obtenerPeso(i) > capacity)
                     knapsack_overfield = true;
-
-
+                
                 while (knapsack_overfield)
                 {
                     int j = rnd.Next(0, lugares.Results.Length);
@@ -336,15 +341,10 @@ namespace Turistiando
                     if (obtenerPeso(i) < capacity)
                         knapsack_overfield = false;
                 }
-
-
-
             }
-
         }
 
         #endregion
-        
 
     }
 }

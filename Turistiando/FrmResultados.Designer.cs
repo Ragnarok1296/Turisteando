@@ -32,33 +32,29 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pbxCerrar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.pbRating = new System.Windows.Forms.PictureBox();
+            this.pbUbicacion = new System.Windows.Forms.PictureBox();
+            this.pbTiempo = new System.Windows.Forms.PictureBox();
+            this.lblRating = new System.Windows.Forms.Label();
+            this.lblTiempo = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.lblNombreLugar = new System.Windows.Forms.Label();
+            this.pbImagen = new System.Windows.Forms.PictureBox();
+            this.plButtons = new System.Windows.Forms.Panel();
+            this.vsBar = new System.Windows.Forms.VScrollBar();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRating)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUbicacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTiempo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
+            this.plButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -98,6 +94,19 @@
             this.panel1.Size = new System.Drawing.Size(800, 65);
             this.panel1.TabIndex = 50;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Teal;
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(718, 10);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 20;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Teal;
@@ -113,79 +122,68 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Controls.Add(this.pictureBox5);
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.pbRating);
+            this.panel2.Controls.Add(this.pbUbicacion);
+            this.panel2.Controls.Add(this.pbTiempo);
+            this.panel2.Controls.Add(this.lblRating);
+            this.panel2.Controls.Add(this.lblTiempo);
             this.panel2.Controls.Add(this.linkLabel1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.lblNombreLugar);
+            this.panel2.Controls.Add(this.pbImagen);
             this.panel2.Location = new System.Drawing.Point(121, 84);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(658, 304);
             this.panel2.TabIndex = 51;
             // 
-            // pictureBox5
+            // pbRating
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(325, 233);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
+            this.pbRating.Image = ((System.Drawing.Image)(resources.GetObject("pbRating.Image")));
+            this.pbRating.Location = new System.Drawing.Point(325, 233);
+            this.pbRating.Name = "pbRating";
+            this.pbRating.Size = new System.Drawing.Size(20, 20);
+            this.pbRating.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRating.TabIndex = 8;
+            this.pbRating.TabStop = false;
             // 
-            // pictureBox4
+            // pbUbicacion
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(325, 187);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
+            this.pbUbicacion.Image = ((System.Drawing.Image)(resources.GetObject("pbUbicacion.Image")));
+            this.pbUbicacion.Location = new System.Drawing.Point(325, 58);
+            this.pbUbicacion.Name = "pbUbicacion";
+            this.pbUbicacion.Size = new System.Drawing.Size(20, 20);
+            this.pbUbicacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUbicacion.TabIndex = 7;
+            this.pbUbicacion.TabStop = false;
             // 
-            // pictureBox3
+            // pbTiempo
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(325, 210);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
+            this.pbTiempo.Image = ((System.Drawing.Image)(resources.GetObject("pbTiempo.Image")));
+            this.pbTiempo.Location = new System.Drawing.Point(325, 210);
+            this.pbTiempo.Name = "pbTiempo";
+            this.pbTiempo.Size = new System.Drawing.Size(20, 20);
+            this.pbTiempo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTiempo.TabIndex = 6;
+            this.pbTiempo.TabStop = false;
             // 
-            // label5
+            // lblRating
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(357, 240);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 17);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Tiempo de Recorrido.";
+            this.lblRating.AutoSize = true;
+            this.lblRating.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRating.Location = new System.Drawing.Point(357, 240);
+            this.lblRating.Name = "lblRating";
+            this.lblRating.Size = new System.Drawing.Size(50, 17);
+            this.lblRating.TabIndex = 5;
+            this.lblRating.Text = "Rating";
             // 
-            // label4
+            // lblTiempo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(357, 217);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Tiempo de traslado.";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(357, 194);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Ubicación del lugar.";
+            this.lblTiempo.AutoSize = true;
+            this.lblTiempo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiempo.Location = new System.Drawing.Point(357, 217);
+            this.lblTiempo.Name = "lblTiempo";
+            this.lblTiempo.Size = new System.Drawing.Size(137, 17);
+            this.lblTiempo.TabIndex = 4;
+            this.lblTiempo.Text = "Tiempo de traslado.";
             // 
             // linkLabel1
             // 
@@ -199,97 +197,44 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Ver en Google Maps";
             // 
-            // label2
+            // lblNombreLugar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(354, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(251, 32);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre del Lugar";
+            this.lblNombreLugar.AutoSize = true;
+            this.lblNombreLugar.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreLugar.ForeColor = System.Drawing.Color.Teal;
+            this.lblNombreLugar.Location = new System.Drawing.Point(319, 23);
+            this.lblNombreLugar.Name = "lblNombreLugar";
+            this.lblNombreLugar.Size = new System.Drawing.Size(251, 32);
+            this.lblNombreLugar.TabIndex = 1;
+            this.lblNombreLugar.Text = "Nombre del Lugar";
             // 
-            // pictureBox2
+            // pbImagen
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(19, 23);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(270, 259);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.pbImagen.Image = ((System.Drawing.Image)(resources.GetObject("pbImagen.Image")));
+            this.pbImagen.Location = new System.Drawing.Point(19, 23);
+            this.pbImagen.Name = "pbImagen";
+            this.pbImagen.Size = new System.Drawing.Size(270, 259);
+            this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagen.TabIndex = 0;
+            this.pbImagen.TabStop = false;
             // 
-            // vScrollBar1
+            // plButtons
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(56, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 304);
-            this.vScrollBar1.TabIndex = 9;
+            this.plButtons.BackColor = System.Drawing.Color.Silver;
+            this.plButtons.Controls.Add(this.vsBar);
+            this.plButtons.Location = new System.Drawing.Point(22, 84);
+            this.plButtons.Name = "plButtons";
+            this.plButtons.Size = new System.Drawing.Size(73, 304);
+            this.plButtons.TabIndex = 52;
             // 
-            // panel3
+            // vsBar
             // 
-            this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.vScrollBar1);
-            this.panel3.Location = new System.Drawing.Point(22, 84);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(73, 304);
-            this.panel3.TabIndex = 52;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Teal;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(9, 55);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(40, 40);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "2";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Teal;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(9, 101);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 40);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "3";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(9, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "1";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Teal;
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(718, 10);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 20;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.vsBar.LargeChange = 20;
+            this.vsBar.Location = new System.Drawing.Point(56, 0);
+            this.vsBar.Name = "vsBar";
+            this.vsBar.Size = new System.Drawing.Size(17, 304);
+            this.vsBar.TabIndex = 9;
+            this.vsBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vsBar_Scroll);
             // 
             // FrmResultados
             // 
@@ -297,25 +242,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 400);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.plButtons);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmResultados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.FrmResultados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRating)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUbicacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTiempo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
+            this.plButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -327,20 +273,16 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pbRating;
+        private System.Windows.Forms.PictureBox pbUbicacion;
+        private System.Windows.Forms.PictureBox pbTiempo;
+        private System.Windows.Forms.Label lblRating;
+        private System.Windows.Forms.Label lblTiempo;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblNombreLugar;
+        private System.Windows.Forms.PictureBox pbImagen;
+        private System.Windows.Forms.Panel plButtons;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.VScrollBar vsBar;
     }
 }

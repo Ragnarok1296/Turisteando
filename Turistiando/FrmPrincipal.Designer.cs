@@ -120,7 +120,7 @@
             this.btnRecomendar.TabIndex = 55;
             this.btnRecomendar.Text = "Recomiéndame";
             this.btnRecomendar.UseVisualStyleBackColor = false;
-            this.btnRecomendar.Click += new System.EventHandler(this.btnRecomendar_Click_1);
+            this.btnRecomendar.Click += new System.EventHandler(this.btnRecomendar_Click);
             // 
             // cbTiempo
             // 
