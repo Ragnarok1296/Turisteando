@@ -35,6 +35,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.gmcMapa = new GMap.NET.WindowsForms.GMapControl();
             this.pbRating = new System.Windows.Forms.PictureBox();
             this.pbUbicacion = new System.Windows.Forms.PictureBox();
             this.pbTiempo = new System.Windows.Forms.PictureBox();
@@ -122,6 +123,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.gmcMapa);
             this.panel2.Controls.Add(this.pbRating);
             this.panel2.Controls.Add(this.pbUbicacion);
             this.panel2.Controls.Add(this.pbTiempo);
@@ -134,6 +136,32 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(658, 304);
             this.panel2.TabIndex = 51;
+            // 
+            // gmcMapa
+            // 
+            this.gmcMapa.Bearing = 0F;
+            this.gmcMapa.CanDragMap = true;
+            this.gmcMapa.EmptyTileColor = System.Drawing.Color.Navy;
+            this.gmcMapa.GrayScaleMode = false;
+            this.gmcMapa.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.gmcMapa.LevelsKeepInMemmory = 5;
+            this.gmcMapa.Location = new System.Drawing.Point(352, 58);
+            this.gmcMapa.MarkersEnabled = true;
+            this.gmcMapa.MaxZoom = 18;
+            this.gmcMapa.MinZoom = 4;
+            this.gmcMapa.MouseWheelZoomEnabled = true;
+            this.gmcMapa.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.gmcMapa.Name = "gmcMapa";
+            this.gmcMapa.NegativeMode = false;
+            this.gmcMapa.PolygonsEnabled = true;
+            this.gmcMapa.RetryLoadTile = 0;
+            this.gmcMapa.RoutesEnabled = true;
+            this.gmcMapa.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.gmcMapa.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.gmcMapa.ShowTileGridLines = false;
+            this.gmcMapa.Size = new System.Drawing.Size(277, 142);
+            this.gmcMapa.TabIndex = 9;
+            this.gmcMapa.Zoom = 15D;
             // 
             // pbRating
             // 
@@ -284,5 +312,6 @@
         private System.Windows.Forms.Panel plButtons;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.VScrollBar vsBar;
+        private GMap.NET.WindowsForms.GMapControl gmcMapa;
     }
 }

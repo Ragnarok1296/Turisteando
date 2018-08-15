@@ -1,11 +1,6 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Turistiando.Modelos
 {
@@ -23,8 +18,8 @@ namespace Turistiando.Modelos
 
             string url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
             string location = "location=" + Ubicacion.Latitud + "," + Ubicacion.Longitud;
-            string radius = "&radius=500";
-            string types = "&types=point_of_interest";
+            string radius = "&radius=5000";
+            string types = "&types=park";
             
 
             url = url + location + radius + types + key;
@@ -77,7 +72,6 @@ namespace Turistiando.Modelos
             string photoreference = "&photoreference=" + _photoreference;
             
             url = url + maxwidth + photoreference + key;
-
             
             return url;
         }
