@@ -16,6 +16,7 @@ namespace Turistiando
 
             toolTip1.SetToolTip(tbxTiempo, "Tiempo de Estancia");
             cbTiempo.SelectedIndex = 0;
+            cbTipos.SelectedIndex = 0;
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -78,20 +79,22 @@ namespace Turistiando
                     estancia = Convert.ToInt32(tbxTiempo.Text) * 12 * 60 * 60;
 
                 //Se obtieen los lugares con los parametros escogidos en el modelo
-                lugares = api.obtenerLugares();
+                lugares = api.obtenerLugares(tipos());
 
                 //Si existen puntos de interes continua el programa
                 if (lugares.Results.Length > 0)
                 {
 
-                    algoritmoGenetico = new AlgoritmoGenetico(estancia);
-                    String cadenaGenetica = algoritmoGenetico.main(lugares);
+                    algoritmoGenetico = new AlgoritmoGenetico(lugares, estancia);
+                    String cadenaGenetica = algoritmoGenetico.main();
+                    Ruta[] rutas = algoritmoGenetico.listaRutas();
 
                     //Se manda llamar a la ventana de resultados y se le pasa, los lugares y la cadena genetica
                     FrmResultados frmResultados = new FrmResultados();
 
                     frmResultados.lugares = lugares;
                     frmResultados.cadenaGenetica = cadenaGenetica;
+                    frmResultados.rutas = rutas;
 
                     frmResultados.Show();
 
@@ -102,6 +105,28 @@ namespace Turistiando
             }
             else
                 MessageBox.Show("Introduzca el tiempo de estancia.");
+        }
+
+        private String tipos()
+        {
+            String tipo = "";
+
+            if (cbTipos.SelectedIndex == 0)
+                tipo = "park";
+            else if (cbTipos.SelectedIndex == 1)
+                tipo = "museum";
+            else if (cbTipos.SelectedIndex == 2)
+                tipo = "zoo";
+            else if (cbTipos.SelectedIndex == 3)
+                tipo = "art_gallery";
+            else if (cbTipos.SelectedIndex == 4)
+                tipo = "campground";
+            else if (cbTipos.SelectedIndex == 5)
+                tipo = "shopping_mall";
+
+
+            return tipo;
+
         }
 
         private void pbxCerrar_Click(object sender, EventArgs e)

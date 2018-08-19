@@ -14,9 +14,10 @@ namespace Turistiando
     {
         public Lugar lugares;
         public String cadenaGenetica;
-
-        private API api;
+        public Ruta[] rutas;
+        
         private Button[] buttons;
+        private String[] urls;
 
         public FrmResultados()
         {
@@ -39,7 +40,6 @@ namespace Turistiando
 
         private void FrmResultados_Load(object sender, EventArgs e)
         {
-            api = new API();
             
             //Se hace el conteo de cuantos lugares fueron seleccionados para asi darle un parametro al array de botones
             int numBotones = 0;
@@ -48,15 +48,21 @@ namespace Turistiando
                     numBotones++;
             
             buttons = new Button[numBotones];
+            urls = new String[numBotones];
+
+            if (numBotones < 7)
+                vsBar.Visible = false;
 
             //Se crean los botones y se selecciona el primero
             crearBotones();
 
             CargarInformacion_Click(buttons[0], e);
+
         }
 
         private void crearBotones()
         {
+            API api = new API();
             //Variables auxiliares para dar formato, tanto para la posicion, como para el texto y asignacion (index)
             int index = 0;
             int posicion = 9; 
@@ -83,6 +89,14 @@ namespace Turistiando
 
                     //Se agregan al panel
                     plButtons.Controls.Add(buttons[index]);
+
+
+                    //Se cargan los url de las imagenes
+                    try {
+                        urls[index] = api.obtenerImagen(lugares.Results[i].Photos[0].PhotoReference);
+                    } catch (Exception ex){
+                        urls[index] = "nulo";
+                    }
 
                     index++;
                     posicion += 46;
@@ -124,13 +138,12 @@ namespace Turistiando
                     buttons[i].BackColor = Color.Teal;
 
             //Se verifica que se tenga foto en el lugar
-            try {
-                string url = api.obtenerImagen(lugares.Results[lugarPosicion].Photos[0].PhotoReference);
+            if(urls[Convert.ToInt32(((Button)sender).Text)-1] != "nulo")
+            {
                 pictureBox1.WaitOnLoad = false;
-                pbImagen.LoadAsync(@url);
-            } catch {
+                pbImagen.LoadAsync(@urls[Convert.ToInt32(((Button)sender).Text)-1]);
+            } else
                 pbImagen.Image = Properties.Resources.file;
-            }
 
             //Se coloca el nombre del lugar
             lblNombreLugar.Text = lugares.Results[lugarPosicion].Name;
@@ -138,12 +151,8 @@ namespace Turistiando
             //Se coloca el mapa
             cargarMapa(lugarPosicion);
 
-            //Se obtiene la latitud y longitud ara mandarsela como parametro al metodo de obtener ruta
-            string latitud = lugares.Results[lugarPosicion].Geometry.Location.Lat.ToString();
-            string longitud = lugares.Results[lugarPosicion].Geometry.Location.Lng.ToString();
-
             //Se almacena el tiempo en segundos
-            lblTiempo.Text = api.obtenerRuta(latitud, longitud).Routes[0].Legs[0].Duration.Text;
+            lblTiempo.Text = rutas[lugarPosicion].Routes[0].Legs[0].Duration.Text;
 
             //Se coloca el rating
             lblRating.Text = lugares.Results[lugarPosicion].Rating.ToString() + " / 5";
@@ -199,10 +208,10 @@ namespace Turistiando
             Double longitud;
 
             //Se llena el array con todos los pasos generados por el json
-            for(int i=0; i<api.obtenerRuta(latitud_Lugar, longitud_Lugar).Routes[0].Legs[0].Steps.Length; i++)
+            for(int i=0; i<rutas[lugar].Routes[0].Legs[0].Steps.Length; i++)
             {
-                latitud = api.obtenerRuta(latitud_Lugar, longitud_Lugar).Routes[0].Legs[0].Steps[i].EndLocation.Lat;
-                longitud = api.obtenerRuta(latitud_Lugar, longitud_Lugar).Routes[0].Legs[0].Steps[i].EndLocation.Lng;
+                latitud = rutas[lugar].Routes[0].Legs[0].Steps[i].EndLocation.Lat;
+                longitud = rutas[lugar].Routes[0].Legs[0].Steps[i].EndLocation.Lng;
                 
                 puntos.Add(new PointLatLng(latitud, longitud));
             }

@@ -41,7 +41,6 @@
             this.pbTiempo = new System.Windows.Forms.PictureBox();
             this.lblRating = new System.Windows.Forms.Label();
             this.lblTiempo = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lblNombreLugar = new System.Windows.Forms.Label();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.plButtons = new System.Windows.Forms.Panel();
@@ -129,7 +128,6 @@
             this.panel2.Controls.Add(this.pbTiempo);
             this.panel2.Controls.Add(this.lblRating);
             this.panel2.Controls.Add(this.lblTiempo);
-            this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.lblNombreLugar);
             this.panel2.Controls.Add(this.pbImagen);
             this.panel2.Location = new System.Drawing.Point(121, 84);
@@ -148,7 +146,7 @@
             this.gmcMapa.Location = new System.Drawing.Point(352, 58);
             this.gmcMapa.MarkersEnabled = true;
             this.gmcMapa.MaxZoom = 18;
-            this.gmcMapa.MinZoom = 4;
+            this.gmcMapa.MinZoom = 13;
             this.gmcMapa.MouseWheelZoomEnabled = true;
             this.gmcMapa.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
             this.gmcMapa.Name = "gmcMapa";
@@ -159,14 +157,14 @@
             this.gmcMapa.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gmcMapa.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gmcMapa.ShowTileGridLines = false;
-            this.gmcMapa.Size = new System.Drawing.Size(277, 142);
+            this.gmcMapa.Size = new System.Drawing.Size(277, 175);
             this.gmcMapa.TabIndex = 9;
-            this.gmcMapa.Zoom = 15D;
+            this.gmcMapa.Zoom = 14D;
             // 
             // pbRating
             // 
             this.pbRating.Image = ((System.Drawing.Image)(resources.GetObject("pbRating.Image")));
-            this.pbRating.Location = new System.Drawing.Point(325, 233);
+            this.pbRating.Location = new System.Drawing.Point(325, 262);
             this.pbRating.Name = "pbRating";
             this.pbRating.Size = new System.Drawing.Size(20, 20);
             this.pbRating.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -186,7 +184,7 @@
             // pbTiempo
             // 
             this.pbTiempo.Image = ((System.Drawing.Image)(resources.GetObject("pbTiempo.Image")));
-            this.pbTiempo.Location = new System.Drawing.Point(325, 210);
+            this.pbTiempo.Location = new System.Drawing.Point(325, 239);
             this.pbTiempo.Name = "pbTiempo";
             this.pbTiempo.Size = new System.Drawing.Size(20, 20);
             this.pbTiempo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -197,7 +195,7 @@
             // 
             this.lblRating.AutoSize = true;
             this.lblRating.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRating.Location = new System.Drawing.Point(357, 240);
+            this.lblRating.Location = new System.Drawing.Point(357, 269);
             this.lblRating.Name = "lblRating";
             this.lblRating.Size = new System.Drawing.Size(50, 17);
             this.lblRating.TabIndex = 5;
@@ -207,23 +205,11 @@
             // 
             this.lblTiempo.AutoSize = true;
             this.lblTiempo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiempo.Location = new System.Drawing.Point(357, 217);
+            this.lblTiempo.Location = new System.Drawing.Point(357, 246);
             this.lblTiempo.Name = "lblTiempo";
             this.lblTiempo.Size = new System.Drawing.Size(137, 17);
             this.lblTiempo.TabIndex = 4;
             this.lblTiempo.Text = "Tiempo de traslado.";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.Teal;
-            this.linkLabel1.Location = new System.Drawing.Point(322, 265);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(140, 17);
-            this.linkLabel1.TabIndex = 2;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Ver en Google Maps";
             // 
             // lblNombreLugar
             // 
@@ -257,7 +243,7 @@
             // 
             // vsBar
             // 
-            this.vsBar.LargeChange = 20;
+            this.vsBar.LargeChange = 30;
             this.vsBar.Location = new System.Drawing.Point(56, 0);
             this.vsBar.Name = "vsBar";
             this.vsBar.Size = new System.Drawing.Size(17, 304);
@@ -306,7 +292,6 @@
         private System.Windows.Forms.PictureBox pbTiempo;
         private System.Windows.Forms.Label lblRating;
         private System.Windows.Forms.Label lblTiempo;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label lblNombreLugar;
         private System.Windows.Forms.PictureBox pbImagen;
         private System.Windows.Forms.Panel plButtons;

@@ -13,13 +13,13 @@ namespace Turistiando.Modelos
 
         private string key = "&key=AIzaSyB5oEd0b0RaZdrMujXhC4mVW4-m7fK6kJA";
 
-        public Lugar obtenerLugares()
+        public Lugar obtenerLugares(string tipo)
         {
 
             string url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
             string location = "location=" + Ubicacion.Latitud + "," + Ubicacion.Longitud;
             string radius = "&radius=5000";
-            string types = "&types=park";
+            string types = "&types=" + tipo;
             
 
             url = url + location + radius + types + key;

@@ -43,6 +43,8 @@
             this.pbCheck = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cbTipos = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).BeginInit();
@@ -194,12 +196,40 @@
             this.pictureBox2.TabIndex = 51;
             this.pictureBox2.TabStop = false;
             // 
+            // cbTipos
+            // 
+            this.cbTipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipos.FormattingEnabled = true;
+            this.cbTipos.Items.AddRange(new object[] {
+            "Parques",
+            "Museos",
+            "Zoologicos",
+            "Galerias de arte",
+            "Terrenos para acampar",
+            "Centros comerciales"});
+            this.cbTipos.Location = new System.Drawing.Point(259, 174);
+            this.cbTipos.Name = "cbTipos";
+            this.cbTipos.Size = new System.Drawing.Size(213, 29);
+            this.cbTipos.TabIndex = 60;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(188, 183);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "tipo de lugar";
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 400);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbTipos);
             this.Controls.Add(this.pbCheck);
             this.Controls.Add(this.btnMiUbicacion);
             this.Controls.Add(this.btnEscogerUbicacion);
@@ -241,6 +271,8 @@
         private System.Windows.Forms.Button btnEscogerUbicacion;
         private System.Windows.Forms.Button btnMiUbicacion;
         private System.Windows.Forms.PictureBox pbCheck;
+        private System.Windows.Forms.ComboBox cbTipos;
+        private System.Windows.Forms.Label label2;
     }
 }
 

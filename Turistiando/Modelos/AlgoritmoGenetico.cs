@@ -7,51 +7,53 @@ namespace Turistiando
     {
         private Lugar lugares;
         private API api;
-
-        private string[] individuos;
-        private double[] pesos;
-        private double[] ganancias;
-
-        //Variables originales del algoritmo genetico
-        private string mejorHijo;
-        private double mejorGanancia;
-        private double mejorPeso;
-
-        private string[] hijosAux;
-
-        private double[] fnorm;
-        private double[] acumulado;
-        private double[] aleatorios;
-
-        private double[] padresPosicion;
-        private string[] padres;
-        private string[] hijos;
-
-        private double auxF;
-        private double sumX;
-        //
+        private Ruta[] rutas;
 
         private int numpoblacion = 100;
         private int generaciones = 500;
         private double probCruce = 0.65;
         private double probMutacion = 0.01;
-        
+
         private int capacity;
         private double[] profits;
         private double[] weights;
 
-        public AlgoritmoGenetico(int _capacity )
+        //Variables originales del algoritmo genetico
+        private string[] individuos;
+        private double[] x;
+        private double[] fx;
+        private double[] fnorm;
+        private double[] acumulado;
+
+        private string mejorHijo;
+        private double mejorGanancia;
+        private double mejorPeso;
+
+        private double[] aleatorios;
+
+        private double[] padresPosicion;
+        private string[] padres;
+
+        private string[] hijos;
+
+        private double auxF;
+        private double sumX;
+
+
+        public AlgoritmoGenetico(Lugar lugares_lista, int _capacity )
         {
             api = new API();
 
+            lugares = lugares_lista;
             capacity = _capacity;
 
             individuos = new string[numpoblacion];
+            rutas = new Ruta[lugares.Results.Length];
         }
 
-        public string main(Lugar lugares_lista)
+        public string main()
         {
-            lugares = lugares_lista;
+            
 
             capturaDeDatos();
 
@@ -75,12 +77,17 @@ namespace Turistiando
             
         }
 
+        public Ruta[] listaRutas()
+        {
+            return rutas;
+        } 
+
         #region Datos
         private void iniciarValores()
         {
             //Se reinician los valores
-            pesos = new double[numpoblacion];
-            ganancias = new double[numpoblacion];
+            x = new double[numpoblacion];
+            fx = new double[numpoblacion];
 
             fnorm = new double[numpoblacion];
             acumulado = new double[numpoblacion];
@@ -106,9 +113,10 @@ namespace Turistiando
                 //Se obtiene la latitud y longitud ara mandarsela como parametro al metodo de obtener ruta
                 string latitud = lugares.Results[i].Geometry.Location.Lat.ToString();
                 string longitud = lugares.Results[i].Geometry.Location.Lng.ToString();
- 
+
                 //Se almacena el tiempo en segundos
-                weights[i] = api.obtenerRuta(latitud, longitud).Routes[0].Legs[0].Duration.Value;
+                rutas[i] = api.obtenerRuta(latitud, longitud);
+                weights[i] = rutas[i].Routes[0].Legs[0].Duration.Value;
             }
 
         }
@@ -161,15 +169,15 @@ namespace Turistiando
         private void seleccion()
         {
             for(int i=0; i<numpoblacion; i++){
-                pesos[i] = obtenerPeso(i);
-                ganancias[i] = funcionObjetivo(i);
+                x[i] = obtenerPeso(i);
+                fx[i] = funcionObjetivo(i);
 
-                sumX = sumX + ganancias[i];
+                sumX = sumX + fx[i];
             }
 
             for (int i=0; i<numpoblacion; i++)
             {
-                fnorm[i] = (ganancias[i]/sumX);
+                fnorm[i] = (fx[i]/sumX);
                 auxF = auxF + fnorm[i];
             }
 
@@ -278,17 +286,14 @@ namespace Turistiando
 
             evaluacion();
 
-            //Tal vez sea clone
-            hijosAux = hijos;
-
-            obtenerMejorHijo(hijosAux);
+            obtenerMejorHijo(hijos);
 
         }
 
         private void obtenerMejorHijo(string[] listaux)
         {
-            pesos = new double[numpoblacion];
-            ganancias = new double[numpoblacion];
+            x = new double[numpoblacion];
+            fx = new double[numpoblacion];
 
             for (int i=0; i<listaux.Length; i++)
             {
@@ -302,19 +307,19 @@ namespace Turistiando
                 }
 
 
-                pesos[i] = peso;
-                ganancias[i] = ganancia;
+                x[i] = peso;
+                fx[i] = ganancia;
 
             }
 
 
             for (int i=0; i<listaux.Length; i++)
             {
-                if( ganancias[i] > mejorGanancia)
+                if( fx[i] > mejorGanancia)
                 {
                     mejorHijo = listaux[i];
-                    mejorGanancia = ganancias[i];
-                    mejorPeso = pesos[i];
+                    mejorGanancia = fx[i];
+                    mejorPeso = x[i];
                 }
             }
 

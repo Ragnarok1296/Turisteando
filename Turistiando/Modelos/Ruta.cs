@@ -2,6 +2,7 @@
 
 namespace Turistiando.Modelos
 {
+
     public partial class Ruta
     {
         [JsonProperty("geocoded_waypoints")]
