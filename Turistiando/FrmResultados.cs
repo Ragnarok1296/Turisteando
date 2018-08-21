@@ -206,16 +206,18 @@ namespace Turistiando
             //Variables para almacenar los datos
             Double latitud;
             Double longitud;
-
-            //Se llena el array con todos los pasos generados por el json
-            for(int i=0; i<rutas[lugar].Routes[0].Legs[0].Steps.Length; i++)
+            try
             {
-                latitud = rutas[lugar].Routes[0].Legs[0].Steps[i].EndLocation.Lat;
-                longitud = rutas[lugar].Routes[0].Legs[0].Steps[i].EndLocation.Lng;
-                
-                puntos.Add(new PointLatLng(latitud, longitud));
-            }
+                //Se llena el array con todos los pasos generados por el json
+                for (int i = 0; i < rutas[lugar].Routes[0].Legs[0].Steps.Length; i++)
+                {
+                    latitud = rutas[lugar].Routes[0].Legs[0].Steps[i].EndLocation.Lat;
+                    longitud = rutas[lugar].Routes[0].Legs[0].Steps[i].EndLocation.Lng;
 
+                    puntos.Add(new PointLatLng(latitud, longitud));
+                }
+
+            } catch { }
             //Se crea la ruta con los puntos agregados anteriormente y se agrega la capa de ruta
             GMapRoute PuntosRuta = new GMapRoute(puntos, "Ruta");
             Ruta.Routes.Add(PuntosRuta);

@@ -115,8 +115,10 @@ namespace Turistiando
                 string longitud = lugares.Results[i].Geometry.Location.Lng.ToString();
 
                 //Se almacena el tiempo en segundos
-                rutas[i] = api.obtenerRuta(latitud, longitud);
-                weights[i] = rutas[i].Routes[0].Legs[0].Duration.Value;
+                try {
+                    rutas[i] = api.obtenerRuta(latitud, longitud);
+                    weights[i] = rutas[i].Routes[0].Legs[0].Duration.Value;
+                } catch { }
             }
 
         }

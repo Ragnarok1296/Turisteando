@@ -53,9 +53,7 @@ namespace Turistiando
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            //Se actualiza la ubicacion
-            Ubicacion.Latitud = latitud;
-            Ubicacion.Longitud = longitud;
+            
 
             //Se regresa a la pagina principal
             FrmPrincipal frmPrincipal = new FrmPrincipal();
@@ -83,6 +81,12 @@ namespace Turistiando
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+
+            //Se actualiza la ubicacion
+            Ubicacion.Latitud = latitud;
+            Ubicacion.Longitud = longitud;
+
+
             FrmPrincipal FrmForm1 = new FrmPrincipal();
             FrmForm1.Show();
             this.Hide();

@@ -33,9 +33,7 @@ namespace Turistiando
             }
             else
                 btnRecomendar.Enabled = false;
-
-            //Se manda llamar la ubicacion antes ya que luego da error si no se hace, es como para activar el servicio
-            Ubicacion.GetLocationProperty();
+            
         }
         
         private void btnMiUbicacion_Click(object sender, EventArgs e)
