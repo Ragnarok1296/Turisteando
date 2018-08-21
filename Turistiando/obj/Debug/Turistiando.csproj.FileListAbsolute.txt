@@ -57,3 +57,20 @@ C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas
 C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turisteando\Turisteando\Turistiando\obj\Debug\Turistiando.csproj.CopyComplete
 C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turisteando\Turisteando\Turistiando\obj\Debug\Turistiando.exe
 C:\Users\HP G62\Desktop\Documentos Monse\9° Cuatrimestre\Desarrollo de Sistemas Inteligentes\Turisteando\Turisteando\Turistiando\obj\Debug\Turistiando.pdb
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\bin\Debug\Turistiando.exe.config
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\bin\Debug\Turistiando.exe
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\bin\Debug\Turistiando.pdb
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\bin\Debug\GMap.NET.Core.dll
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\obj\Debug\Turistiando.csprojAssemblyReference.cache
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\obj\Debug\Turistiando.FrmPrincipal.resources
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\obj\Debug\Turistiando.FrmResultados.resources
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\obj\Debug\Turistiando.FrmUbicacion.resources
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\obj\Debug\Turistiando.Properties.Resources.resources
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\obj\Debug\Turistiando.csproj.GenerateResource.cache
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\obj\Debug\Turistiando.csproj.CoreCompileInputs.cache
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\obj\Debug\Turistiando.csproj.CopyComplete
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\obj\Debug\Turistiando.exe
+C:\Users\Misae\Documents\Proyectos\Sistemas Inteligentes\Turisteando\Turistiando\obj\Debug\Turistiando.pdb
